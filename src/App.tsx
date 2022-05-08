@@ -1,13 +1,6 @@
-import React, { useEffect } from "react";
 import "./App.css";
-import phaserGame from "./PhaserGame";
-import CloudsScene from "./scenes/CloudsScene";
 
 const App = () => {
-  useEffect(() => {
-    phaserGame.scene.add("clouds", CloudsScene);
-  }, []);
-
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +14,10 @@ const App = () => {
           View Source
         </a>
       </header>
+      <div>
+test
+    <div id="phaser-container"></div>
+      </div>
     </div>
   );
 };

@@ -6,16 +6,12 @@ const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
   backgroundColor: "#48C4F8",
   parent: 'phaser-container',
-  scale: {
-    autoCenter: Phaser.Scale.CENTER_BOTH,
-    width: window.innerWidth,
-    height: window.innerHeight,
-  },
   scene: [CloudsScene],
-  render:{
-    pixelArt: true,
-    antialias: false,
-  }
+  pixelArt: true,
+  scale: {
+    mode: Phaser.Scale.ENVELOP,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
 }
 
 export default new Phaser.Game(config)
