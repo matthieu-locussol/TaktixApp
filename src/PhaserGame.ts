@@ -1,3 +1,4 @@
+import { GridEngine } from 'grid-engine'
 import Phaser from 'phaser'
 
 import CloudsScene from './scenes/CloudsScene'
@@ -11,6 +12,15 @@ const config: Phaser.Types.Core.GameConfig = {
   scale: {
     mode: Phaser.Scale.ENVELOP,
     autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  plugins: {
+    scene: [
+      {
+        key: "gridEngine",
+        plugin: GridEngine,
+        mapping: "gridEngine",
+      },
+    ],
   },
 }
 
