@@ -1,6 +1,6 @@
 {
   "package": {
-    "productName": "starter-react-phaser3-tauri",
+    "productName": "taktix",
     "version": "0.1.0"
   },
   "build": {
@@ -53,7 +53,7 @@
     },
     "windows": [
       {
-        "title": "starter-react-phaser3-tauri",
+        "title": "Taktix",
         "width": 800,
         "height": 600,
         "resizable": true,

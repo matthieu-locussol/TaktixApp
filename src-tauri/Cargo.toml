@@ -1,11 +1,11 @@
 [package]
-name = "app"
+name = "taktix"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "A small browser game written in TypeScript."
+authors = ["Matthieu LOCUSSOL"]
 license = ""
 repository = ""
-default-run = "app"
+default-run = "taktix"
 edition = "2021"
 rust-version = "1.57"
 
@@ -26,3 +26,6 @@ default = [ "custom-protocol" ]
 # this feature is used used for production builds where `devPath` points to the filesystem
 # DO NOT remove this
 custom-protocol = [ "tauri/custom-protocol" ]
+
+[[bin]]
+name = "taktix"

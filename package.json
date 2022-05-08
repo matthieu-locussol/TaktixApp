@@ -1,5 +1,6 @@
 {
-  "name": "taktix-app",
+  "name": "taktix",
+  "description": "A small browser game written in TypeScript.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
