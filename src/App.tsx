@@ -1,14 +1,13 @@
-import React from 'react'
-import './App.css'
-import phaserGame from './PhaserGame'
-import HelloWorldScene from './scenes/HelloWorldScene'
+import React, { useEffect } from "react";
+import "./App.css";
+import phaserGame from "./PhaserGame";
+import CloudsScene from "./scenes/CloudsScene";
 
-const handleClick = () => {
-  const scene = phaserGame.scene.keys.helloworld as HelloWorldScene
-  scene.createEmitter()
-}
+const App = () => {
+  useEffect(() => {
+    phaserGame.scene.add("clouds", CloudsScene);
+  }, []);
 
-function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -21,12 +20,9 @@ function App() {
         >
           View Source
         </a>
-        <button className="App-button" onClick={handleClick}>
-          Or click me
-        </button>
       </header>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

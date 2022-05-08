@@ -1,23 +1,21 @@
 import Phaser from 'phaser'
 
-import HelloWorldScene from './scenes/HelloWorldScene'
+import CloudsScene from './scenes/CloudsScene'
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
+  backgroundColor: "#48C4F8",
   parent: 'phaser-container',
-  backgroundColor: '#282c34',
   scale: {
-    mode: Phaser.Scale.ScaleModes.RESIZE,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
     width: window.innerWidth,
     height: window.innerHeight,
   },
-  physics: {
-    default: 'arcade',
-    arcade: {
-      gravity: { y: 200 },
-    },
-  },
-  scene: [HelloWorldScene],
+  scene: [CloudsScene],
+  render:{
+    pixelArt: true,
+    antialias: false,
+  }
 }
 
 export default new Phaser.Game(config)
