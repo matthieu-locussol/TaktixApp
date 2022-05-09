@@ -1,7 +1,7 @@
 import { GridEngine } from 'grid-engine'
 import Phaser from 'phaser'
 
-import CloudsScene from './scenes/CloudsScene'
+import CloudsScene from './game/CloudsScene'
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,

@@ -25,6 +25,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":20,
          "id":3,
+         "locked":true,
          "name":"Ground",
          "opacity":1,
          "properties":[
@@ -62,6 +63,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":20,
          "id":4,
+         "locked":true,
          "name":"House",
          "opacity":1,
          "properties":[
@@ -174,6 +176,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":20,
          "id":6,
+         "locked":true,
          "name":"Above",
          "opacity":1,
          "properties":[
