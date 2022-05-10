@@ -13,7 +13,6 @@
       "check:prettier": "prettier --list-different --config .prettierrc.json --ignore-path .prettierignore --write **/*.{ts,tsx,json}",
       "check:typescript": "tsc --project tsconfig.json --noEmit",
       "tests": "vitest",
-      "tests:ci": "vitest --ci",
       "release": "standard-version -a"
    },
    "dependencies": {

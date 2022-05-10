@@ -54,7 +54,7 @@ jobs:
               node-version: '16.11.0'
               cache: yarn
          - run: yarn install
-         - run: yarn tests:ci
+         - run: yarn tests
 
    release:
       name: Release
