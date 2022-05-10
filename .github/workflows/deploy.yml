@@ -65,6 +65,7 @@ jobs:
       needs: [unit_tests]
       if: github.ref == 'refs/heads/master'
       steps:
+         - uses: actions/checkout@v2
          - name: Get specific changed files
            id: changed-files
            uses: tj-actions/changed-files@v19
@@ -83,7 +84,6 @@ jobs:
                  LICENSE
                  README.md
                  taktix.code-workspace
-         - uses: actions/checkout@v2
          - uses: actions/setup-node@v2
            if: steps.changed-files.outputs.any_changed == 'true'
            with:
