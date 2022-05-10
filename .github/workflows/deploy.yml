@@ -1,0 +1,91 @@
+name: Deploy
+
+on:
+   push:
+      branches:
+         - master
+   pull_request:
+
+jobs:
+   eslint:
+      name: Check eslint
+      runs-on: ubuntu-latest
+      steps:
+         - uses: actions/checkout@v2
+         - uses: actions/setup-node@v2
+           with:
+              node-version: '16.11.0'
+              cache: yarn
+         - run: yarn install
+         - run: yarn check:eslint
+
+   prettier:
+      name: Check prettier
+      runs-on: ubuntu-latest
+      steps:
+         - uses: actions/checkout@v2
+         - uses: actions/setup-node@v2
+           with:
+              node-version: '16.11.0'
+              cache: yarn
+         - run: yarn install
+         - run: yarn check:prettier
+
+   typescript:
+      name: Check typescript
+      runs-on: ubuntu-latest
+      steps:
+         - uses: actions/checkout@v2
+         - uses: actions/setup-node@v2
+           with:
+              node-version: '16.11.0'
+              cache: yarn
+         - run: yarn install
+         - run: yarn check:typescript
+
+   unit_tests:
+      name: Unit tests
+      runs-on: ubuntu-latest
+      needs: [prettier, typescript, eslint]
+      steps:
+         - uses: actions/checkout@v2
+         - uses: actions/setup-node@v2
+           with:
+              node-version: '16.11.0'
+              cache: yarn
+         - run: yarn install
+         - run: yarn tests:ci
+
+   release:
+      name: Release
+      strategy:
+         matrix:
+            os: [ubuntu-latest, macos-latest, windows-latest]
+      runs-on: ${{ matrix.os }}
+      needs: [unit_tests]
+      if: github.ref == 'refs/heads/master'
+      steps:
+         - uses: actions/checkout@v2
+         - uses: actions/setup-node@v2
+           with:
+              node-version: '16.11.0'
+         - name: install Rust stable
+           uses: actions-rs/toolchain@v1
+           with:
+              toolchain: stable
+         - name: install dependencies (ubuntu only)
+           if: matrix.platform == 'ubuntu-latest'
+           run: |
+              sudo apt-get update
+              sudo apt-get install -y webkit2gtk-4.0 libayatana-appindicator3-dev
+         - run: yarn install
+         - run: yarn build
+         - uses: tauri-apps/tauri-action@v0
+           env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           with:
+              tagName: taktix-v__VERSION__
+              releaseName: 'Taktix v__VERSION__'
+              releaseBody: 'See the assets to download this version and install.'
+              releaseDraft: true
+              prerelease: false
