@@ -44,11 +44,19 @@ export const ChatPanel = () => (
             overflowY: 'auto',
          }}
       >
-         {[...new Array(10)].map(() => (
-            <Typography color="rgb(224, 224, 224)">
-               [20:39] <b>Matthieu :</b> Hello world!
-            </Typography>
-         ))}
+         <Typography color="rgb(224, 224, 224)">
+            [20:39] <b>Matthieu :</b> Hello world!
+         </Typography>
+         <Typography color="rgb(224, 224, 224)">
+            [20:39] <b>Matthieu :</b> Hello world!
+         </Typography>
+         <Typography color="rgb(224, 224, 224)">
+            [20:39] <b>Matthieu :</b> Hello world!
+         </Typography>
+         <Typography color="rgb(224, 224, 224)">
+            [20:39] <b>Matthieu :</b> Hello world! Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Donec eget nunc eget nunc eget nunc eget nunc eget nunc eget.
+         </Typography>
       </Box>
       <Input size="small" />
    </Root>
