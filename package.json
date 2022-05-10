@@ -11,6 +11,7 @@
       "check:eslint": "eslint --ignore-path .gitignore src",
       "check:prettier": "prettier --list-different --config .prettierrc.json --ignore-path .prettierignore --write **/*.{ts,tsx,json}",
       "check:typescript": "tsc --project tsconfig.json --noEmit",
+      "tests:ci": "echo \"done\"",
       "postinstall": "husky install"
    },
    "dependencies": {
