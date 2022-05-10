@@ -6,14 +6,12 @@
       "airbnb-typescript",
       "prettier",
       "plugin:import/recommended",
-      "plugin:import/typescript",
-      "plugin:storybook/recommended"
+      "plugin:import/typescript"
    ],
    "parser": "@typescript-eslint/parser",
    "parserOptions": {
       "project": ["./tsconfig.json"]
    },
-   "ignorePatterns": "next.config.js",
    "rules": {
       "arrow-body-style": "off",
       "no-console": "off",
@@ -51,8 +49,5 @@
             "argsIgnorePattern": "^_"
          }
       ]
-   },
-   "env": {
-      "jest": true
    }
 }

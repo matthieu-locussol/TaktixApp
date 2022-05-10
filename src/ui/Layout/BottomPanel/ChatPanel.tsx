@@ -44,7 +44,7 @@ export const ChatPanel = () => (
             overflowY: 'auto',
          }}
       >
-         {[...new Array(10)].map((_, i) => (
+         {[...new Array(10)].map(() => (
             <Typography color="rgb(224, 224, 224)">
                [20:39] <b>Matthieu :</b> Hello world!
             </Typography>

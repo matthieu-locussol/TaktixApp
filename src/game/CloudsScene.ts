@@ -18,7 +18,7 @@ export default class CloudsScene extends Phaser.Scene {
       const cloudCityTilemap = this.make.tilemap({ key: 'cloud-city-map' });
       cloudCityTilemap.addTilesetImage('Cloud City', 'tiles');
 
-      for (let i = 0; i < cloudCityTilemap.layers.length; i++) {
+      for (let i = 0; i < cloudCityTilemap.layers.length; i += 1) {
          const layer = cloudCityTilemap.createLayer(i, 'Cloud City', 0, 0);
          layer.setDepth(i);
          layer.scale = 3;

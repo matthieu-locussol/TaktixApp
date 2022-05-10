@@ -8,7 +8,11 @@
       "build": "react-scripts build",
       "test": "react-scripts test",
       "eject": "react-scripts eject",
-      "tauri": "tauri"
+      "tauri": "tauri",
+      "check:eslint": "eslint --ignore-path .gitignore src",
+      "check:prettier": "prettier --list-different --config .prettierrc.json --ignore-path .prettierignore --write **/*.{ts,tsx,json}",
+      "check:typescript": "tsc --project tsconfig.json --noEmit",
+      "postinstall": "husky install"
    },
    "dependencies": {
       "@emotion/react": "^11.9.0",
@@ -28,7 +32,19 @@
       "typescript": "^4.4.2"
    },
    "devDependencies": {
-      "@tauri-apps/cli": "^1.0.0-rc.8"
+      "@commitlint/cli": "^16.2.4",
+      "@commitlint/config-conventional": "^16.2.4",
+      "@tauri-apps/cli": "^1.0.0-rc.8",
+      "@typescript-eslint/eslint-plugin": "^5.23.0",
+      "@typescript-eslint/parser": "^5.23.0",
+      "eslint": "^8.15.0",
+      "eslint-config-airbnb": "^19.0.4",
+      "eslint-config-airbnb-typescript": "^17.0.0",
+      "eslint-config-prettier": "^8.5.0",
+      "eslint-plugin-import": "^2.26.0",
+      "husky": "^8.0.1",
+      "prettier": "^2.6.2",
+      "standard-version": "^9.3.2"
    },
    "eslintConfig": {
       "extends": [
