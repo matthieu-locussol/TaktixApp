@@ -11,7 +11,8 @@
       "check:eslint": "eslint --ignore-path .gitignore src",
       "check:prettier": "prettier --list-different --config .prettierrc.json --ignore-path .prettierignore --write **/*.{ts,tsx,json}",
       "check:typescript": "tsc --project tsconfig.json --noEmit",
-      "tests:ci": "echo \"done\"",
+      "tests": "vitest",
+      "tests:ci": "vitest --ci",
       "postinstall": "husky install"
    },
    "dependencies": {
@@ -19,7 +20,6 @@
       "@emotion/styled": "^11.8.1",
       "@mui/material": "^5.6.4",
       "@tauri-apps/api": "^1.0.0-rc.3",
-      "@types/jest": "^27.0.1",
       "@types/node": "^16.7.13",
       "@types/react": "^17.0.20",
       "@types/react-dom": "^17.0.9",
@@ -30,7 +30,8 @@
       "react": "^17.0.2",
       "react-dom": "^17.0.2",
       "typescript": "^4.4.2",
-      "vite": "^2.9.8"
+      "vite": "^2.9.8",
+      "vitest": "^0.12.3"
    },
    "devDependencies": {
       "@commitlint/cli": "^16.2.4",

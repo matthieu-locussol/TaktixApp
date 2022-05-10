@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import { _assert, _assertStrictEqual, _assertTrue } from './_assert';
 
 describe('_assert', () => {
