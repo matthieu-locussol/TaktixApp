@@ -13,7 +13,8 @@
       "check:prettier": "prettier --list-different --config .prettierrc.json --ignore-path .prettierignore --write **/*.{ts,tsx,json}",
       "check:typescript": "tsc --project tsconfig.json --noEmit",
       "tests": "vitest",
-      "release": "standard-version -a"
+      "release": "standard-version -a",
+      "postrelease": "tsc src/scripts/version.ts && node src/scripts/version.js"
    },
    "dependencies": {
       "@emotion/react": "^11.9.0",
@@ -46,6 +47,7 @@
       "eslint-plugin-import": "^2.26.0",
       "husky": "^8.0.1",
       "prettier": "^2.6.2",
-      "standard-version": "^9.3.2"
+      "standard-version": "^9.3.2",
+      "ts-node": "^10.7.0"
    }
 }

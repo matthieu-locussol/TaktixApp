@@ -12,6 +12,9 @@
 /build
 /dist
 
+# scripts
+/src/scripts/**/*.js
+
 # misc
 .DS_Store
 .env.local

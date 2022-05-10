@@ -1,6 +1,6 @@
 [package]
 name = "taktix"
-version = "0.1.0"
+version = "0.1.1"
 description = "A small browser game written in TypeScript."
 authors = ["Matthieu LOCUSSOL"]
 license = ""
