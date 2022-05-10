@@ -4,10 +4,9 @@
    "version": "0.1.0",
    "private": true,
    "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "react-scripts test",
-      "eject": "react-scripts eject",
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "preview": "vite preview",
       "tauri": "tauri",
       "check:eslint": "eslint --ignore-path .gitignore src",
       "check:prettier": "prettier --list-different --config .prettierrc.json --ignore-path .prettierignore --write **/*.{ts,tsx,json}",
@@ -23,13 +22,14 @@
       "@types/node": "^16.7.13",
       "@types/react": "^17.0.20",
       "@types/react-dom": "^17.0.9",
+      "@vitejs/plugin-react": "^1.3.2",
       "assert": "^2.0.0",
       "grid-engine": "^2.15.0",
       "phaser": "^3.55.2",
       "react": "^17.0.2",
       "react-dom": "^17.0.2",
-      "react-scripts": "5.0.0",
-      "typescript": "^4.4.2"
+      "typescript": "^4.4.2",
+      "vite": "^2.9.8"
    },
    "devDependencies": {
       "@commitlint/cli": "^16.2.4",
@@ -45,23 +45,5 @@
       "husky": "^8.0.1",
       "prettier": "^2.6.2",
       "standard-version": "^9.3.2"
-   },
-   "eslintConfig": {
-      "extends": [
-         "react-app",
-         "react-app/jest"
-      ]
-   },
-   "browserslist": {
-      "production": [
-         ">0.2%",
-         "not dead",
-         "not op_mini all"
-      ],
-      "development": [
-         "last 1 chrome version",
-         "last 1 firefox version",
-         "last 1 safari version"
-      ]
    }
 }

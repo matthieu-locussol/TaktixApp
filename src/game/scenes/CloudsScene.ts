@@ -6,9 +6,9 @@ export default class CloudsScene extends Phaser.Scene {
    }
 
    public preload() {
-      this.load.image('tiles', 'assets/tilesets/cloud_tileset.png');
-      this.load.tilemapTiledJSON('cloud-city-map', 'assets/maps/clouds_1.json');
-      this.load.spritesheet('player', 'assets/characters/characters.png', {
+      this.load.image('tiles', '../../../assets/tilesets/cloud_tileset.png');
+      this.load.tilemapTiledJSON('cloud-city-map', '../../../assets/maps/clouds_1.json');
+      this.load.spritesheet('player', '../../../assets/characters/characters.png', {
          frameWidth: 26,
          frameHeight: 36,
       });
