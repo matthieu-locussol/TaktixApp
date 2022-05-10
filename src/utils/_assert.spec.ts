@@ -1,6 +1,6 @@
 import { _assert, _assertStrictEqual, _assertTrue } from './_assert';
 
-describe("_assert", () => {
+describe('_assert', () => {
    test('_assert', () => {
       expect(() => _assert(true)).toThrow();
       expect(() => _assert(false)).toThrow();

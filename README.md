@@ -1,11 +1,16 @@
 # Starter React + Phaser3 + Tauri
+
 ## What's included?
 
-- [Phaser 3](https://github.com/photonstorm/phaser) - overlaid canvas with the config in `src/PhaserGame.ts` and a scene in `src/scenes/`
-- [Create React App](https://github.com/facebook/create-react-app) - React, TSX, ES6, TypeScript, no need to install bundler, ...etc
-- An example button in `src/App.tsx` showing how to communicate with Phaser within a React component
-- Default Tauri setup
-- That's it!
+-  [Phaser 3](https://github.com/photonstorm/phaser) - overlaid canvas with the config in
+   `src/PhaserGame.ts` and a scene in `src/scenes/`
+-  [Create React App](https://github.com/facebook/create-react-app) - React, TSX, ES6, TypeScript,
+   no need to install bundler, ...etc
+-  An example button in `src/App.tsx` showing how to communicate with Phaser within a React
+   component
+-  Default Tauri setup
+-  That's it!
+
 ## Getting started
 
 Clone the project and in the project directory, you can run:

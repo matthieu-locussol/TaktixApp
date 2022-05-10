@@ -1,0 +1,21 @@
+{
+   "folders": [
+      {
+         "name": "Taktix ✨",
+         "path": "."
+      }
+   ],
+   "settings": {
+      "editor.formatOnSave": true,
+      "editor.guides.bracketPairs": true,
+      "editor.bracketPairColorization.enabled": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+         "source.fixAll": true,
+         "source.organizeImports": true
+      }
+   },
+   "extensions": {
+      "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+   }
+}

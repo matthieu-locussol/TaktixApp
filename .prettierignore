@@ -1,0 +1,4 @@
+#!include:.gitignore
+
+CHANGELOG.md
+*.txt
