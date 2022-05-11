@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { BottomPanel } from './Layout/BottomPanel/BottomPanel';
+import { BottomPanel } from './layout/BottomPanel/BottomPanel';
 
 export const Game = () => (
    <Box>

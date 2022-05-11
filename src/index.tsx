@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './game/PhaserGame';
 import { theme } from './theme';
 import { Game } from './ui/Game';
-import { Layout } from './ui/Layout/Layout';
+import { Layout } from './ui/layout/Layout';
 
 ReactDOM.render(
    <React.StrictMode>
