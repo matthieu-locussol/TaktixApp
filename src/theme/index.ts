@@ -16,6 +16,20 @@ export const theme = createTheme({
                background: '#48C4F8',
                boxSizing: 'content-box',
             },
+            '*::-webkit-scrollbar': {
+               width: 8,
+            },
+            '&::-webkit-scrollbar-thumb': {
+               backgroundColor: '#D8D8D8',
+            },
+            '*:hover': {
+               '&::-webkit-scrollbar-thumb': {
+                  backgroundColor: '#D8D8D8',
+               },
+            },
+            '*:hover::-webkit-scrollbar-thumb': {
+               backgroundColor: '#D8D8D8',
+            },
          },
       },
    },
