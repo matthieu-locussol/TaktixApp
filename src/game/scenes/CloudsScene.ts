@@ -1,6 +1,7 @@
+import { Direction } from 'grid-engine';
 import Phaser from 'phaser';
 
-export default class CloudsScene extends Phaser.Scene {
+export default class CloudsScene extends Phaser.CustomScene {
    constructor() {
       super('clouds');
    }
@@ -42,24 +43,20 @@ export default class CloudsScene extends Phaser.Scene {
          ],
       };
 
-      // @ts-expect-error
       this.gridEngine.create(cloudCityTilemap, gridEngineConfig);
    }
 
    public update() {
       const cursors = this.input.keyboard.createCursorKeys();
+
       if (cursors.left.isDown) {
-         // @ts-expect-error
-         this.gridEngine.move('player', 'left');
+         this.gridEngine.move('player', Direction.LEFT);
       } else if (cursors.right.isDown) {
-         // @ts-expect-error
-         this.gridEngine.move('player', 'right');
+         this.gridEngine.move('player', Direction.RIGHT);
       } else if (cursors.up.isDown) {
-         // @ts-expect-error
-         this.gridEngine.move('player', 'up');
+         this.gridEngine.move('player', Direction.UP);
       } else if (cursors.down.isDown) {
-         // @ts-expect-error
-         this.gridEngine.move('player', 'down');
+         this.gridEngine.move('player', Direction.DOWN);
       }
    }
 }
