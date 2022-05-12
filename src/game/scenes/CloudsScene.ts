@@ -1,7 +1,7 @@
 import { Direction } from 'grid-engine';
-import { CustomScene } from '../CustomScene';
+import { Scene } from '../Scene';
 
-export default class CloudsScene extends CustomScene {
+export class CloudsScene extends Scene {
    constructor() {
       super('clouds');
    }
