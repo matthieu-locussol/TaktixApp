@@ -1,63 +1,49 @@
 import { Box, experimental_sx as sx, styled, TextField, Typography } from '@mui/material';
+import { Card } from '../../components/Card';
 
-const Root = styled(Box)(() =>
+const Chatbox = styled(Box)(() =>
    sx({
+      width: '40vw',
+      height: '16vh',
+      overflow: 'auto',
       display: 'flex',
       flexDirection: 'column',
-      width: '40vw',
-      height: '100%',
-      bgcolor: '#464646',
+      p: 1,
    }),
 );
 
 const Input = styled(TextField)(() =>
    sx({
-      color: 'rgb(224, 224, 224)',
-      width: '100%',
       mt: 'auto',
-      borderTop: '1px solid #333',
+      borderTop: '1px solid rgba(0, 0, 0, 0.12)',
       input: {
-         color: 'white',
-         bgcolor: '#565656',
+         bgcolor: '#F8F8F8',
          py: 0.5,
+         px: 1,
+         borderBottomLeftRadius: 4,
+         borderBottomRightRadius: 4,
+         fontSize: 14,
       },
       fieldset: {
          border: 'none',
-         borderRadius: 0,
       },
       ':hover': {
          input: {
-            bgcolor: '#646464',
+            bgcolor: '#F0F0F0',
          },
       },
    }),
 );
 
 export const ChatPanel = () => (
-   <Root>
-      <Box
-         sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            py: 0.5,
-            px: 1,
-            overflowY: 'auto',
-         }}
-      >
-         <Typography color="rgb(224, 224, 224)">
-            [20:39] <b>Matthieu :</b> Hello world!
-         </Typography>
-         <Typography color="rgb(224, 224, 224)">
-            [20:39] <b>Matthieu :</b> Hello world!
-         </Typography>
-         <Typography color="rgb(224, 224, 224)">
-            [20:39] <b>Matthieu :</b> Hello world!
-         </Typography>
-         <Typography color="rgb(224, 224, 224)">
-            [20:39] <b>Matthieu :</b> Hello world! Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Donec eget nunc eget nunc eget nunc eget nunc eget nunc eget.
-         </Typography>
-      </Box>
-      <Input size="small" />
-   </Root>
+   <Card>
+      <Chatbox>
+         {[...Array(10)].map(() => (
+            <Typography variant="body2">
+               [20:39] <b>Matthieu:</b> Hello world!
+            </Typography>
+         ))}
+      </Chatbox>
+      <Input fullWidth size="small" />
+   </Card>
 );

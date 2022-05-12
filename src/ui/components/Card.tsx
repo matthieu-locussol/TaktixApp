@@ -10,5 +10,5 @@ const Root = styled(MuiCard)(() =>
 );
 
 export const Card = (props: CardProps) => {
-   return <Root variant="outlined" {...props} />;
+   return <Root {...props} />;
 };
