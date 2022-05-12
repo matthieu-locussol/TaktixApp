@@ -1,7 +1,7 @@
 import { Direction } from 'grid-engine';
-import Phaser from 'phaser';
+import { CustomScene } from '../CustomScene';
 
-export default class CloudsScene extends Phaser.CustomScene {
+export default class CloudsScene extends CustomScene {
    constructor() {
       super('clouds');
    }
