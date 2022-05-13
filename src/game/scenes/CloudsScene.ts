@@ -7,6 +7,7 @@ export class CloudsScene extends Scene {
    }
 
    public preload() {
+      this.load.audio('background', 'assets/musics/background.mp3');
       this.load.image('tiles', '/assets/tilesets/cloud_tileset.png');
       this.load.tilemapTiledJSON('cloud-city-map', '/assets/maps/clouds_1.json');
       this.load.spritesheet('player', '/assets/characters/characters.png', {
@@ -44,6 +45,7 @@ export class CloudsScene extends Scene {
       };
 
       this.gridEngine.create(cloudCityTilemap, gridEngineConfig);
+      this.sound.play('background', { loop: true, volume: 0.05 });
    }
 
    public update() {
