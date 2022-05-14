@@ -1,4 +1,5 @@
 import { Direction } from 'grid-engine';
+import { store } from '../../store';
 import { Scene } from '../Scene';
 
 export class CloudsScene extends Scene {
@@ -7,7 +8,21 @@ export class CloudsScene extends Scene {
    }
 
    public preload() {
-      this.load.audio('background', 'assets/musics/background.mp3');
+      const { loadingScreenStore } = store;
+
+      this.load.on('progress', (value: number) => {
+         loadingScreenStore.setProgress(value);
+      });
+
+      this.load.on('fileprogress', (file: Phaser.Loader.File) => {
+         loadingScreenStore.setCurrentPath(file.src);
+      });
+
+      this.load.on('complete', () => {
+         loadingScreenStore.setLoading(false);
+      });
+
+      this.load.audio('background', '/assets/musics/background.mp3');
       this.load.image('tiles', '/assets/tilesets/cloud_tileset.png');
       this.load.tilemapTiledJSON('cloud-city-map', '/assets/maps/clouds_1.json');
       this.load.spritesheet('player', '/assets/characters/characters.png', {
