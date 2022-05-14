@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/matthieu-locussol/TaktixApp/compare/v0.2.1...v0.2.2) (2022-05-14)
+
+
+### Features
+
+* added a CharacterStore & small refactoring ([e161519](https://github.com/matthieu-locussol/TaktixApp/commit/e1615196e92df1ae43031f4a4a3fddb4479d16df))
+* added a CharacterStore & updated CharacterPanel and Game accordingly ([2354d64](https://github.com/matthieu-locussol/TaktixApp/commit/2354d647ec1f2631ba188c4a40b5b34ebf7a7ca3))
+* added a levels data file ([77242e4](https://github.com/matthieu-locussol/TaktixApp/commit/77242e43c9a6bc23fc58c3a76e9bcb5c051a31b2))
+* added a levels utility file & its specs ([ca07ad8](https://github.com/matthieu-locussol/TaktixApp/commit/ca07ad8402cc283bed4cc135b640020dbb8b3865))
+* added a number utility file & its specs ([287da70](https://github.com/matthieu-locussol/TaktixApp/commit/287da70f90528cdd8329274f1c93bb0eb784a344))
+
+
+### Bug Fixes
+
+* clouds map collisions ([a7408f8](https://github.com/matthieu-locussol/TaktixApp/commit/a7408f811265788f717b3651c02fc94d32cbf665))
+
 ### [0.2.1](https://github.com/matthieu-locussol/TaktixApp/compare/v0.2.0...v0.2.1) (2022-05-14)
 
 
