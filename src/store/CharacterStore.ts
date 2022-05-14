@@ -23,6 +23,10 @@ export class CharacterStore {
    }
 
    get healthPercentage() {
+      if (this.maxHealth === 0) {
+         return 0;
+      }
+
       return (this.health / this.maxHealth) * 100;
    }
 
