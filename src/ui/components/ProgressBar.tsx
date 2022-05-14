@@ -49,17 +49,15 @@ const Label = styled(Typography)(() =>
 
 interface ProgressBarProps extends LinearProgressProps {
    value: number;
-   maxValue: number;
+   progress: number;
    fillColor: string;
    showProgress?: boolean;
 }
 
-export const ProgressBar = ({ value, maxValue, showProgress, ...rest }: ProgressBarProps) => {
-   const progress = (value / maxValue) * 100;
-
+export const ProgressBar = ({ value, progress, showProgress, ...rest }: ProgressBarProps) => {
    return (
       <Root>
-         <StyledProgressBar variant="determinate" value={progress} {...rest} />
+         <StyledProgressBar variant="determinate" progress={progress} value={progress} {...rest} />
          {showProgress && <Label variant="caption">{value}</Label>}
       </Root>
    );

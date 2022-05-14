@@ -1,19 +1,57 @@
 import { makeAutoObservable } from 'mobx';
+import {
+   getExperienceForNextLevel,
+   getFloorExperience,
+   getLevelFromExperience,
+} from '../utils/levels';
 
 export class CharacterStore {
-   public loadingData: boolean = true;
+   public name: string = '';
 
-   public name: string | null = null;
+   public health: number = 0;
+
+   public maxHealth: number = 0;
+
+   public experience: number = 0;
 
    constructor() {
       makeAutoObservable(this);
    }
 
-   public setLoadingData(loadingData: boolean) {
-      this.loadingData = loadingData;
+   get level() {
+      return getLevelFromExperience(this.experience);
    }
 
-   public setName(name: string | null) {
+   get healthPercentage() {
+      return (this.health / this.maxHealth) * 100;
+   }
+
+   get experiencePercentage() {
+      const floorExperience = getFloorExperience(this.experience);
+      const experienceForNextLevel = getExperienceForNextLevel(this.experience);
+
+      // 678_000 - 810_000
+
+      const min = this.experience - floorExperience;
+      const max = experienceForNextLevel - floorExperience;
+
+      const percentage = (min / max) * 100;
+      return percentage;
+   }
+
+   public setName(name: string) {
       this.name = name;
+   }
+
+   public setHealth(health: number) {
+      this.health = health;
+   }
+
+   public setMaxHealth(maxHealth: number) {
+      this.maxHealth = maxHealth;
+   }
+
+   public setExperience(experience: number) {
+      this.experience = experience;
    }
 }
