@@ -2,10 +2,10 @@ import { GridEngine } from 'grid-engine';
 import Phaser from 'phaser';
 import { CloudsScene } from './scenes/CloudsScene';
 
-const config: Phaser.Types.Core.GameConfig = {
+export const config: Phaser.Types.Core.GameConfig = {
    type: Phaser.AUTO,
    backgroundColor: '#48C4F8',
-   parent: 'phaser-container',
+   parent: 'root-game',
    scene: [CloudsScene],
    pixelArt: true,
    scale: {
@@ -23,4 +23,4 @@ const config: Phaser.Types.Core.GameConfig = {
    },
 };
 
-export default new Phaser.Game(config);
+export const game = new Phaser.Game(config);

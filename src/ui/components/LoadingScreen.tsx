@@ -9,6 +9,16 @@ import {
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../store';
 
+const Wrapper = styled(Stack)(() =>
+   sx({
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      lineHeight: 0,
+   }),
+);
+
 const ProgressValueWrapper = styled(Box)(() =>
    sx({
       top: 0,
@@ -25,30 +35,20 @@ const ProgressValueWrapper = styled(Box)(() =>
 
 export const LoadingScreen = observer(() => {
    const {
-      loadingScreenStore: { progress, currentPath },
+      loadingScreenStore: { progress, currentAssetPath },
    } = useStore();
 
-   const progressValue = progress * 100;
-
    return (
-      <Stack
-         height="100%"
-         display="flex"
-         alignItems="center"
-         justifyContent="center"
-         lineHeight={0}
-      >
-         <Box position="relative">
-            <CircularProgress size={64} variant="determinate" value={progressValue} />
+      <Wrapper>
+         <Box position="relative" mb={2}>
+            <CircularProgress size={80} variant="determinate" value={progress} />
             <ProgressValueWrapper>
-               <Typography variant="button" fontWeight="bold" color="white">
-                  {progressValue}%
+               <Typography fontWeight="bold" color="white">
+                  {progress}%
                </Typography>
             </ProgressValueWrapper>
          </Box>
-         <Typography variant="body2" fontStyle="italic">
-            {currentPath}
-         </Typography>
-      </Stack>
+         <Typography fontStyle="italic">{currentAssetPath}</Typography>
+      </Wrapper>
    );
 });

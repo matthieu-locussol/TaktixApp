@@ -9,6 +9,7 @@ const StyledStack = styled(Stack)(() =>
       width: 200,
       display: 'flex',
       alignItems: 'center',
+      opacity: 0.85,
    }),
 );
 

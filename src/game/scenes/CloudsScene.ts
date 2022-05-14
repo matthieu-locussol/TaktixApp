@@ -15,11 +15,11 @@ export class CloudsScene extends Scene {
       });
 
       this.load.on('fileprogress', (file: Phaser.Loader.File) => {
-         loadingScreenStore.setCurrentPath(file.src);
+         loadingScreenStore.setCurrentAssetPath(file.src);
       });
 
       this.load.on('complete', () => {
-         loadingScreenStore.setLoading(false);
+         loadingScreenStore.setLoadingAssets(false);
       });
 
       this.load.audio('background', '/assets/musics/background.mp3');
@@ -60,7 +60,7 @@ export class CloudsScene extends Scene {
       };
 
       this.gridEngine.create(cloudCityTilemap, gridEngineConfig);
-      this.sound.play('background', { loop: true, volume: 0.05 });
+      this.sound.play('background', { loop: true, volume: 0.0 });
    }
 
    public update() {

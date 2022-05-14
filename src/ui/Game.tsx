@@ -5,16 +5,18 @@ import { CharacterPanel } from './components/CharacterPanel';
 import { LoadingScreen } from './components/LoadingScreen';
 
 export const Game = observer(() => {
-   const store = useStore();
+   const {
+      loadingScreenStore: { loadingAssets },
+   } = useStore();
 
-   if (store.loadingScreenStore.loading) {
+   if (loadingAssets) {
       return <LoadingScreen />;
    }
 
    return (
       <Box>
          <CharacterPanel />
-         <Box id="phaser-container" />
+         <Box id="root-game" />
       </Box>
    );
 });
