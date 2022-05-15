@@ -1,12 +1,13 @@
 import { GridEngine } from 'grid-engine';
 import Phaser from 'phaser';
 import { CloudsScene } from './scenes/CloudsScene';
+import { HouseScene } from './scenes/HouseScene';
 
 export const config: Phaser.Types.Core.GameConfig = {
    type: Phaser.AUTO,
    backgroundColor: '#48C4F8',
    parent: 'root-game',
-   scene: [CloudsScene],
+   scene: [CloudsScene, HouseScene],
    pixelArt: true,
    scale: {
       mode: Phaser.Scale.ENVELOP,

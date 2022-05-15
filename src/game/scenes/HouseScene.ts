@@ -2,9 +2,9 @@ import { Direction } from 'grid-engine';
 import { store } from '../../store';
 import { Scene } from '../Scene';
 
-export class CloudsScene extends Scene {
+export class HouseScene extends Scene {
    constructor() {
-      super('clouds');
+      super('house');
    }
 
    public preload() {
@@ -23,8 +23,8 @@ export class CloudsScene extends Scene {
       });
 
       this.load.audio('background', '/assets/musics/background.mp3');
-      this.load.image('tiles', '/assets/tilesets/cloud_tileset.png');
-      this.load.tilemapTiledJSON('cloud-city-map', '/assets/maps/clouds_1.json');
+      this.load.image('house_tiles', '/assets/tilesets/house_tileset.png');
+      this.load.tilemapTiledJSON('house-map', '/assets/maps/house.json');
       this.load.spritesheet('player', '/assets/characters/characters.png', {
          frameWidth: 26,
          frameHeight: 36,
@@ -32,11 +32,11 @@ export class CloudsScene extends Scene {
    }
 
    public create() {
-      const cloudCityTilemap = this.make.tilemap({ key: 'cloud-city-map' });
-      cloudCityTilemap.addTilesetImage('Cloud City', 'tiles');
+      const houseTilemap = this.make.tilemap({ key: 'house-map' });
+      houseTilemap.addTilesetImage('House', 'house_tiles');
 
-      for (let i = 0; i < cloudCityTilemap.layers.length; i += 1) {
-         const layer = cloudCityTilemap.createLayer(i, 'Cloud City', 0, 0);
+      for (let i = 0; i < houseTilemap.layers.length; i += 1) {
+         const layer = houseTilemap.createLayer(i, 'House', 0, 0);
          layer.setDepth(i);
          layer.scale = 3;
       }
@@ -53,15 +53,14 @@ export class CloudsScene extends Scene {
                id: 'player',
                sprite: playerSprite,
                walkingAnimationMapping: 6,
-               startPosition: { x: 12, y: 7 },
+               startPosition: { x: 8, y: 8 },
                charLayer: 'player',
             },
          ],
       };
 
-      this.gridEngine.create(cloudCityTilemap, gridEngineConfig);
-
-      this.sound.play('background', { loop: true, volume: 0.05 });
+      this.gridEngine.create(houseTilemap, gridEngineConfig);
+      this.gridEngine.turnTowards('player', Direction.UP);
    }
 
    public update() {
@@ -78,10 +77,11 @@ export class CloudsScene extends Scene {
       }
 
       if (
-         this.gridEngine.getPosition('player').x === 12 &&
-         this.gridEngine.getPosition('player').y === 6
+         (this.gridEngine.getPosition('player').x === 8 ||
+            this.gridEngine.getPosition('player').x === 9) &&
+         this.gridEngine.getPosition('player').y === 9
       ) {
-         this.scene.start('house');
+         this.scene.start('clouds');
       }
    }
 }
