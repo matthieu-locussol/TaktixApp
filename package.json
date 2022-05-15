@@ -1,7 +1,7 @@
 {
    "name": "taktix",
    "description": "A small browser game written in TypeScript.",
-   "version": "0.2.2",
+   "version": "0.2.3",
    "private": true,
    "scripts": {
       "postinstall": "husky install",

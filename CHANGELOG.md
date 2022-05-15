@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/matthieu-locussol/TaktixApp/compare/v0.2.2...v0.2.3) (2022-05-15)
+
+
+### Features
+
+* added a HouseScene & setup maps teleportation ([35fa7c4](https://github.com/matthieu-locussol/TaktixApp/commit/35fa7c434d3f2fcfedf94c490124ab5078ab2c5e))
+
 ### [0.2.2](https://github.com/matthieu-locussol/TaktixApp/compare/v0.2.1...v0.2.2) (2022-05-14)
 
 
