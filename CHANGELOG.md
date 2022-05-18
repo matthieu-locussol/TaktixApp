@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.4](https://github.com/matthieu-locussol/TaktixApp/compare/v0.2.3...v0.2.4) (2022-05-18)
+
+
+### Features
+
+* added teleportationSpots data ([73e5ceb](https://github.com/matthieu-locussol/TaktixApp/commit/73e5ceb4206df6d98e3a251cc23d597ec2673b85))
+
 ### [0.2.3](https://github.com/matthieu-locussol/TaktixApp/compare/v0.2.2...v0.2.3) (2022-05-15)
 
 
