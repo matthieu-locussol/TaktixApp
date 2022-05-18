@@ -1,4 +1,3 @@
-import { Direction } from 'grid-engine';
 import { store } from '../../store';
 import { Scene } from '../Scene';
 
@@ -62,26 +61,5 @@ export class CloudsScene extends Scene {
       this.gridEngine.create(cloudCityTilemap, gridEngineConfig);
 
       this.sound.play('background', { loop: true, volume: 0.05 });
-   }
-
-   public update() {
-      const cursors = this.input.keyboard.createCursorKeys();
-
-      if (cursors.left.isDown) {
-         this.gridEngine.move('player', Direction.LEFT);
-      } else if (cursors.right.isDown) {
-         this.gridEngine.move('player', Direction.RIGHT);
-      } else if (cursors.up.isDown) {
-         this.gridEngine.move('player', Direction.UP);
-      } else if (cursors.down.isDown) {
-         this.gridEngine.move('player', Direction.DOWN);
-      }
-
-      if (
-         this.gridEngine.getPosition('player').x === 12 &&
-         this.gridEngine.getPosition('player').y === 6
-      ) {
-         this.scene.start('house');
-      }
    }
 }

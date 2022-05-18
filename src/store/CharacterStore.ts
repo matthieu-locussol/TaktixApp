@@ -1,3 +1,4 @@
+import type { Position } from 'grid-engine';
 import { makeAutoObservable } from 'mobx';
 import {
    getExperienceForNextLevel,
@@ -13,6 +14,8 @@ export class CharacterStore {
    public maxHealth: number = 0;
 
    public experience: number = 0;
+
+   public position: Position = { x: 0, y: 0 };
 
    constructor() {
       makeAutoObservable(this);
@@ -33,8 +36,6 @@ export class CharacterStore {
    get experiencePercentage() {
       const floorExperience = getFloorExperience(this.experience);
       const experienceForNextLevel = getExperienceForNextLevel(this.experience);
-
-      // 678_000 - 810_000
 
       const min = this.experience - floorExperience;
       const max = experienceForNextLevel - floorExperience;
@@ -57,5 +58,17 @@ export class CharacterStore {
 
    public setExperience(experience: number) {
       this.experience = experience;
+   }
+
+   public setPosition(position: Position) {
+      this.position = position;
+   }
+
+   public setPositionX(x: number) {
+      this.position.x = x;
+   }
+
+   public setPositionY(y: number) {
+      this.position.y = y;
    }
 }

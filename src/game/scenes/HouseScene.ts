@@ -1,10 +1,24 @@
-import { Direction } from 'grid-engine';
+import { Direction, Position } from 'grid-engine';
 import { store } from '../../store';
-import { Scene } from '../Scene';
+import { Scene, SceneData } from '../Scene';
 
 export class HouseScene extends Scene {
+   public entrancePosition: Position = { x: 8, y: 8 };
+
+   public entranceDirection: Direction = Direction.DOWN;
+
    constructor() {
       super('house');
+   }
+
+   public init({ entrancePosition, entranceDirection }: SceneData) {
+      if (entrancePosition !== undefined) {
+         this.entrancePosition = entrancePosition;
+      }
+
+      if (entranceDirection !== undefined) {
+         this.entranceDirection = entranceDirection;
+      }
    }
 
    public preload() {
@@ -53,35 +67,13 @@ export class HouseScene extends Scene {
                id: 'player',
                sprite: playerSprite,
                walkingAnimationMapping: 6,
-               startPosition: { x: 8, y: 8 },
+               startPosition: this.entrancePosition,
                charLayer: 'player',
             },
          ],
       };
 
       this.gridEngine.create(houseTilemap, gridEngineConfig);
-      this.gridEngine.turnTowards('player', Direction.UP);
-   }
-
-   public update() {
-      const cursors = this.input.keyboard.createCursorKeys();
-
-      if (cursors.left.isDown) {
-         this.gridEngine.move('player', Direction.LEFT);
-      } else if (cursors.right.isDown) {
-         this.gridEngine.move('player', Direction.RIGHT);
-      } else if (cursors.up.isDown) {
-         this.gridEngine.move('player', Direction.UP);
-      } else if (cursors.down.isDown) {
-         this.gridEngine.move('player', Direction.DOWN);
-      }
-
-      if (
-         (this.gridEngine.getPosition('player').x === 8 ||
-            this.gridEngine.getPosition('player').x === 9) &&
-         this.gridEngine.getPosition('player').y === 9
-      ) {
-         this.scene.start('clouds');
-      }
+      this.gridEngine.turnTowards('player', this.entranceDirection);
    }
 }

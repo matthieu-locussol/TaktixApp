@@ -13,6 +13,7 @@
       "project": ["./tsconfig.json"]
    },
    "rules": {
+      "import/no-cycle": "off",
       "arrow-body-style": "off",
       "no-console": "off",
       "no-underscore-dangle": "off",
