@@ -37,19 +37,19 @@
       "vitest": "^0.12.3"
    },
    "devDependencies": {
-      "@commitlint/cli": "^16.2.4",
-      "@commitlint/config-conventional": "^16.2.4",
-      "@tauri-apps/cli": "^1.0.0-rc.8",
-      "@typescript-eslint/eslint-plugin": "^5.23.0",
-      "@typescript-eslint/parser": "^5.23.0",
-      "eslint": "^8.15.0",
+      "@commitlint/cli": "^17.0.2",
+      "@commitlint/config-conventional": "^17.0.2",
+      "@tauri-apps/cli": "^1.0.0",
+      "@typescript-eslint/eslint-plugin": "^5.28.0",
+      "@typescript-eslint/parser": "^5.28.0",
+      "eslint": "^8.18.0",
       "eslint-config-airbnb": "^19.0.4",
       "eslint-config-airbnb-typescript": "^17.0.0",
       "eslint-config-prettier": "^8.5.0",
       "eslint-plugin-import": "^2.26.0",
       "husky": "^8.0.1",
-      "prettier": "^2.6.2",
-      "standard-version": "^9.3.2",
-      "ts-node": "^10.7.0"
+      "prettier": "^2.7.1",
+      "standard-version": "^9.5.0",
+      "ts-node": "^10.8.1"
    }
 }
