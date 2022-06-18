@@ -6,7 +6,11 @@ export const store = new Store();
 
 const StoreContext = createContext<{ store: Store }>({ store });
 
-export const StoreProvider: React.FC = observer(({ children }) => (
+interface StoreProviderProps {
+   children: React.ReactNode;
+}
+
+export const StoreProvider: React.FC<StoreProviderProps> = observer(({ children }) => (
    <StoreContext.Provider value={{ store }}>{children}</StoreContext.Provider>
 ));
 
