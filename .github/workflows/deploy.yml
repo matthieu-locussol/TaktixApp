@@ -65,7 +65,7 @@ jobs:
       needs: [unit_tests]
       if:
          ${{ github.ref == 'refs/heads/master' && github.actor != 'dependabot[bot]' &&
-         contains(github.event.head_commit.message, '/dependabot/npm_and_yarn/') }}
+         !contains(github.event.head_commit.message, '/dependabot/npm_and_yarn/') }}
       steps:
          - uses: actions/checkout@v3
          - name: Get specific changed files
