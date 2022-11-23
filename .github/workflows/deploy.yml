@@ -63,7 +63,7 @@ jobs:
             os: [ubuntu-latest, macos-latest, windows-latest]
       runs-on: ${{ matrix.os }}
       needs: [unit_tests]
-      if: github.ref == 'refs/heads/master'
+      if: ${{ github.ref == 'refs/heads/master' && github.actor != 'dependabot[bot]' }}
       steps:
          - uses: actions/checkout@v2
          - name: Get specific changed files
@@ -112,3 +112,16 @@ jobs:
               releaseBody: 'See the assets to download this version and install.'
               releaseDraft: false
               prerelease: false
+
+   merge_dependabot:
+      name: 'Merge (Dependabot)'
+      needs: [unit_tests]
+      runs-on: ubuntu-latest
+      permissions:
+         pull-requests: write
+      if: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request'}}
+      steps:
+         - run: gh pr merge --auto --merge "$PR_URL"
+           env:
+              PR_URL: ${{github.event.pull_request.html_url}}
+              GITHUB_TOKEN: ${{secrets.CUSTOM_GITHUB_TOKEN}}
