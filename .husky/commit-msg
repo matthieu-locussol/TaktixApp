@@ -2,6 +2,3 @@
 . "$(dirname "$0")/_/husky.sh"
 
 yarn commitlint --edit $1
-yarn check:eslint
-yarn check:prettier
-yarn check:typescript
