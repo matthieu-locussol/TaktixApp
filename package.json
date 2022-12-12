@@ -17,7 +17,7 @@
       "postrelease": "tsc src/scripts/version.ts && node src/scripts/version.js"
    },
    "dependencies": {
-      "@emotion/react": "^11.9.3",
+      "@emotion/react": "^11.10.5",
       "@emotion/styled": "^11.10.5",
       "@mui/material": "^5.10.17",
       "@tauri-apps/api": "^1.2.0",
