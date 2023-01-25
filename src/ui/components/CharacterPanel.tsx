@@ -1,18 +1,16 @@
-import { experimental_sx as sx, Stack, StackProps, styled } from '@mui/material';
+import { Stack, StackProps, styled } from '@mui/material';
 import { useStore } from '../../store';
 import { CharacterAvatar } from './CharacterAvatar';
 import { ProgressBar } from './ProgressBar';
 
-const StyledStack = styled(Stack)(() =>
-   sx({
-      mt: 2,
-      ml: 2,
-      width: 200,
-      display: 'flex',
-      alignItems: 'center',
-      opacity: 0.85,
-   }),
-);
+const StyledStack = styled(Stack)(({ theme }) => ({
+   marginTop: theme.spacing(2),
+   marginLeft: theme.spacing(2),
+   width: 200,
+   display: 'flex',
+   alignItems: 'center',
+   opacity: 0.85,
+}));
 
 export const CharacterPanel = (props: StackProps) => {
    const {
