@@ -1,37 +1,26 @@
-import {
-   Box,
-   CircularProgress,
-   experimental_sx as sx,
-   Stack,
-   styled,
-   Typography,
-} from '@mui/material';
+import { Box, CircularProgress, Stack, Typography, styled } from '@mui/material';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '../../store';
 
-const Wrapper = styled(Stack)(() =>
-   sx({
-      height: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      lineHeight: 0,
-   }),
-);
+const Wrapper = styled(Stack)(() => ({
+   height: '100%',
+   display: 'flex',
+   alignItems: 'center',
+   justifyContent: 'center',
+   lineHeight: 0,
+}));
 
-const ProgressValueWrapper = styled(Box)(() =>
-   sx({
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      display: 'flex',
-      position: 'absolute',
-      alignItems: 'center',
-      justifyContent: 'center',
-      lineHeight: 0,
-   }),
-);
+const ProgressValueWrapper = styled(Box)(() => ({
+   top: 0,
+   left: 0,
+   right: 0,
+   bottom: 0,
+   display: 'flex',
+   position: 'absolute',
+   alignItems: 'center',
+   justifyContent: 'center',
+   lineHeight: 0,
+}));
 
 export const LoadingScreen = observer(() => {
    const {
