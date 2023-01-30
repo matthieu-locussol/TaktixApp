@@ -26,7 +26,7 @@
       "@types/react-dom": "^18.0.10",
       "@vitejs/plugin-react": "^3.0.1",
       "assert": "^2.0.0",
-      "grid-engine": "^2.24.0",
+      "grid-engine": "^2.25.0",
       "mobx": "^6.7.0",
       "mobx-react-lite": "^3.4.0",
       "phaser": "^3.55.2",

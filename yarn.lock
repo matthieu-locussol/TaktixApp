@@ -2573,12 +2573,12 @@ grapheme-splitter@^1.0.4:
   resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
 
-grid-engine@^2.24.0:
-  version "2.24.0"
-  resolved "https://registry.yarnpkg.com/grid-engine/-/grid-engine-2.24.0.tgz#47bd8ab64281ef430fac6c2717c1b722f3cad15f"
-  integrity sha512-3rbd+1QHz41XtV3oYyvlQBYXfwmgVScn1a6o+meeTF3STh9JfvpWkXL+YkgyE5gCh5uxEcAphubrObz4kHcntw==
+grid-engine@^2.25.0:
+  version "2.25.0"
+  resolved "https://registry.yarnpkg.com/grid-engine/-/grid-engine-2.25.0.tgz#55141431aa82721dbc14a89dfd97071f364de85e"
+  integrity sha512-pxElP4R+Ckc/lpjMEaMix61i3F8Qem9lEFxM8mAnNAbRwh9NuP/ZaIZU7g2f5WuxNZ42NmucPm+n5Fy7yMmRBA==
   dependencies:
-    rxjs "^7.5.7"
+    rxjs "^7.8.0"
 
 handlebars@^4.7.7:
   version "4.7.7"
@@ -3906,10 +3906,10 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-rxjs@^7.5.7:
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.6.0.tgz#361da5362b6ddaa691a2de0b4f2d32028f1eb5a2"
-  integrity sha512-DDa7d8TFNUalGC9VqXvQ1euWNN7sc63TrUCuM9J998+ViviahMIjKSOU7rfcgFOF+FCD71BhDRv4hrFz+ImDLQ==
+rxjs@^7.8.0:
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.8.0.tgz#90a938862a82888ff4c7359811a595e14e1e09a4"
+  integrity sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==
   dependencies:
     tslib "^2.1.0"
 
