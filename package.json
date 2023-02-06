@@ -34,7 +34,7 @@
       "react-dom": "^18.2.0",
       "typescript": "^4.9.5",
       "vite": "^4.1.1",
-      "vitest": "^0.28.3"
+      "vitest": "^0.28.4"
    },
    "devDependencies": {
       "@commitlint/cli": "^17.4.2",
