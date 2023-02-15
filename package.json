@@ -23,7 +23,7 @@
       "@tauri-apps/api": "^1.2.0",
       "@types/node": "^18.13.0",
       "@types/react": "^18.0.28",
-      "@types/react-dom": "^18.0.10",
+      "@types/react-dom": "^18.0.11",
       "@vitejs/plugin-react": "^3.1.0",
       "assert": "^2.0.0",
       "grid-engine": "^2.25.1",
