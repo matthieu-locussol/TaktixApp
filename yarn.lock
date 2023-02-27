@@ -2567,10 +2567,10 @@ grapheme-splitter@^1.0.4:
   resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
 
-grid-engine@^2.25.2:
-  version "2.25.2"
-  resolved "https://registry.yarnpkg.com/grid-engine/-/grid-engine-2.25.2.tgz#7bd4bf54aef7043481317b8546aff9bf1f0e2078"
-  integrity sha512-Kxmz45dJx/D5f5ANR3aldUoTo0kqcuU7qOznc883WIadtruRtMFdBqonMBJBpRyBOnHIYC4Rtm4EdIab/pIjbg==
+grid-engine@^2.26.1:
+  version "2.26.1"
+  resolved "https://registry.yarnpkg.com/grid-engine/-/grid-engine-2.26.1.tgz#606c9b04200cb36ed733c7161e4b22c1118fe9ab"
+  integrity sha512-gZYywIFnDNycBQMY9+Jhg/kGIedn4I/sEdLXULnIjRApBJ3MmerRcE3hyP0zTtHACqpI7wSwPWApVrXJrsFXyg==
   dependencies:
     rxjs "^7.8.0"
 
