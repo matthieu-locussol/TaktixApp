@@ -19,7 +19,7 @@
    "dependencies": {
       "@emotion/react": "^11.10.6",
       "@emotion/styled": "^11.10.6",
-      "@mui/material": "^5.11.11",
+      "@mui/material": "^5.11.12",
       "@tauri-apps/api": "^1.2.0",
       "@types/node": "^18.14.4",
       "@types/react": "^18.0.28",
