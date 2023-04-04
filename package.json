@@ -40,7 +40,7 @@
       "@commitlint/cli": "^17.5.1",
       "@commitlint/config-conventional": "^17.4.4",
       "@tauri-apps/cli": "^1.2.3",
-      "@typescript-eslint/eslint-plugin": "^5.57.0",
+      "@typescript-eslint/eslint-plugin": "^5.57.1",
       "@typescript-eslint/parser": "^5.57.1",
       "eslint": "^8.37.0",
       "eslint-config-airbnb": "^19.0.4",
