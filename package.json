@@ -27,7 +27,7 @@
       "@vitejs/plugin-react": "^4.0.3",
       "assert": "^2.0.0",
       "grid-engine": "^2.27.1",
-      "mobx": "^6.9.1",
+      "mobx": "^6.10.0",
       "mobx-react-lite": "^4.0.3",
       "phaser": "^3.55.2",
       "react": "^18.2.0",
