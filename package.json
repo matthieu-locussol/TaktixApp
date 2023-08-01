@@ -24,7 +24,7 @@
       "@types/node": "^20.4.5",
       "@types/react": "^18.2.18",
       "@types/react-dom": "^18.2.7",
-      "@vitejs/plugin-react": "^4.0.3",
+      "@vitejs/plugin-react": "^4.0.4",
       "assert": "^2.0.0",
       "grid-engine": "^2.27.1",
       "mobx": "^6.10.0",
