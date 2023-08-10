@@ -37,7 +37,7 @@
       "vitest": "^0.34.1"
    },
    "devDependencies": {
-      "@commitlint/cli": "^17.6.7",
+      "@commitlint/cli": "^17.7.0",
       "@commitlint/config-conventional": "^17.7.0",
       "@tauri-apps/cli": "^1.4.0",
       "@typescript-eslint/eslint-plugin": "^5.62.0",
